@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerRow: View {
     @EnvironmentObject var triviaManager: TriviaManager
-    var answer: Answers
+    var answer: Answer
     @State var isSelected: Bool = false
     var body: some View {
         HStack(spacing: 20) {
@@ -44,7 +44,7 @@ struct AnswerRow: View {
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(answer: Answers(text: "Single", isCorrect: false))
+        AnswerRow(answer: Answer(text: "Single", isCorrect: false))
             .environmentObject(TriviaManager())
     }
 }
