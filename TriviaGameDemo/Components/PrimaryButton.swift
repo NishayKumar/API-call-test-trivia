@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PrimaryButton: View {
     let text: String
-    let background: Color = Color.accentColor
+    let background: Color
     var body: some View {
         Text(text)
             .foregroundColor(.white)
@@ -23,6 +23,6 @@ struct PrimaryButton: View {
 
 struct PrimaryButton_Previews: PreviewProvider {
     static var previews: some View {
-        PrimaryButton(text: "Next")
+        PrimaryButton(text: "Next", background: .accentColor)
     }
 }
