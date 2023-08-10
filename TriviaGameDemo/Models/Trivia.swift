@@ -8,7 +8,7 @@
 import Foundation
 
 struct Trivia: Decodable {
-    var result: [Result]
+    var results: [Result]
     
     struct Result:Decodable, Identifiable {
         var id: UUID {
@@ -22,7 +22,7 @@ struct Trivia: Decodable {
         var incorrectAnswer: [String]
         
         
-        var formatterQuestion: AttributedString {
+        var formattedQuestion: AttributedString {
             do {
                 return try AttributedString(markdown: question)
             } catch {

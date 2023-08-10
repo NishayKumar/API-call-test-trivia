@@ -10,7 +10,7 @@ import SwiftUI
 struct TriviaView: View {
     @EnvironmentObject var triviaManager: TriviaManager
     var body: some View {
-        if triviaManager.reachEnd {
+        if triviaManager.reachedEnd {
             ReachedEnd
         }else {
             QuestionView()
@@ -48,5 +48,6 @@ extension TriviaView {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background((Color (red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118)))
+        .navigationBarBackButtonHidden()
     }
 }
